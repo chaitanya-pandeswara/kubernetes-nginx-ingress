@@ -1,4 +1,6 @@
-<img src="images/Ingress_With_LB.png"/>
+<p align="center">
+<img src="images/Ingress_With_LB.png" align="center"/>
+</p>
 
 
 
