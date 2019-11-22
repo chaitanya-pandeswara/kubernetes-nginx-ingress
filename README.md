@@ -32,7 +32,7 @@ nano hello-kubernetes-first.yaml
 
 Add the following lines:
 
-hello-kubernetes-first.yaml
+<u>hello-kubernetes-first.yaml</u>
 
 ```
 apiVersion: v1
@@ -84,7 +84,8 @@ kubectl create -f hello-kubernetes-first.yaml
 You’ll see the following output:
 
 ```
-Outputservice/hello-kubernetes-first created
+Output
+service/hello-kubernetes-first created
 deployment.apps/hello-kubernetes-first created
 ```
 
@@ -112,7 +113,7 @@ nano hello-kubernetes-second.yaml
 
 Add the following lines:
 
-hello-kubernetes-second.yaml
+<u>hello-kubernetes-second.yaml</u>
 
 ```
 apiVersion: v1
@@ -164,7 +165,8 @@ kubectl create -f hello-kubernetes-second.yaml
 The output will be:
 
 ```
-Outputservice/hello-kubernetes-second created
+Output
+service/hello-kubernetes-second created
 deployment.apps/hello-kubernetes-second created
 ```
 
@@ -280,7 +282,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the following lines to your file:
 
-hello-kubernetes-ingress.yaml
+<u>hello-kubernetes-ingress.yaml</u>
 
 ```
 apiVersion: extensions/v1beta1
@@ -491,7 +493,7 @@ nano production_issuer.yaml
 
 Add the following lines:
 
-production_issuer.yaml
+<u>production_issuer.yaml</u>
 
 ```
 apiVersion: cert-manager.io/v1alpha2
@@ -538,7 +540,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the highlighted lines:
 
-hello-kubernetes-ingress.yaml
+<u>hello-kubernetes-ingress.yaml</u>
 
 ```
 apiVersion: extensions/v1beta1
