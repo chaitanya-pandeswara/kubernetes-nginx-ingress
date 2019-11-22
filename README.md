@@ -1,4 +1,4 @@
-img src="images/kubernetes.png" align="center" />
+<img src="images/kubernetes.png" align="center" />
 
 
 
