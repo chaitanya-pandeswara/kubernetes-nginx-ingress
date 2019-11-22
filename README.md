@@ -32,7 +32,7 @@ nano hello-kubernetes-first.yaml
 
 Add the following lines:
 
-<u>hello-kubernetes-first.yaml</u>
+<ins>hello-kubernetes-first.yaml</ins>
 
 ```
 apiVersion: v1
@@ -113,7 +113,7 @@ nano hello-kubernetes-second.yaml
 
 Add the following lines:
 
-<u>hello-kubernetes-second.yaml</u>
+<ins>hello-kubernetes-second.yaml</ins>
 
 ```
 apiVersion: v1
@@ -282,7 +282,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the following lines to your file:
 
-<u>hello-kubernetes-ingress.yaml</u>
+<ins>hello-kubernetes-ingress.yaml</ins>
 
 ```
 apiVersion: extensions/v1beta1
@@ -493,7 +493,7 @@ nano production_issuer.yaml
 
 Add the following lines:
 
-<u>production_issuer.yaml</u>
+<ins>production_issuer.yaml</ins>
 
 ```
 apiVersion: cert-manager.io/v1alpha2
@@ -540,7 +540,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the highlighted lines:
 
-<u>hello-kubernetes-ingress.yaml</u>
+<ins>hello-kubernetes-ingress.yaml</ins>
 
 ```
 apiVersion: extensions/v1beta1
