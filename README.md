@@ -85,6 +85,7 @@ You’ll see the following output:
 
 ```
 Output
+
 service/hello-kubernetes-first created
 deployment.apps/hello-kubernetes-first created
 ```
@@ -99,6 +100,7 @@ The output will look like this:
 
 ```
 Output
+
 NAME                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 hello-kubernetes-first   ClusterIP   10.245.85.236   <none>        80:31623/TCP   35s
 ```
@@ -166,6 +168,7 @@ The output will be:
 
 ```
 Output
+
 service/hello-kubernetes-second created
 deployment.apps/hello-kubernetes-second created
 ```
@@ -211,6 +214,7 @@ The output will look like:
 
 ```
 Output
+
 NAME:   nginx-ingress
 LAST DEPLOYED: ...
 NAMESPACE: default
@@ -345,6 +349,7 @@ You will see the following output:
 
 ```
 Output
+
 customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io created
@@ -371,6 +376,7 @@ Helm will display the following output:
 
 ```
 Output
+
 "jetstack" has been added to your repositories
 ```
 
@@ -384,6 +390,7 @@ You will see the following output:
 
 ```
 Output
+
 NAME:   cert-manager
 LAST DEPLOYED: ...
 NAMESPACE: cert-manager
@@ -529,6 +536,7 @@ You will see the following output:
 
 ```
 Output
+
 clusterissuer.cert-manager.io/letsencrypt-prod created
 ```
 
@@ -585,6 +593,7 @@ You will see the following output:
 
 ```
 Output
+
 ingress.extensions/hello-kubernetes-ingress configured
 ```
 
@@ -598,7 +607,9 @@ The end of the output will look similar to this:
 
 ```
 Output
+
 Events:
+
   Type    Reason        Age   From          Message
   ----    ------        ----  ----          -------
   Normal  GeneratedKey  51s   cert-manager  Generated a new private key
