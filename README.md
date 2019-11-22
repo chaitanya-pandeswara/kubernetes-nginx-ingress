@@ -1,4 +1,4 @@
-<img src="images/kubernetes.png" align="center" />
+<img src="images/Ingress_With_LB.png" align="center" />
 
 
 
@@ -8,7 +8,7 @@
 2. [Prerequisites](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#prerequisites)
 3. Part-1
    - [Step 1 — Setting Up Hello World Deployments](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-1--setting-up-hello-world-deployments)
-   - [Step 1 — Setting Up Hello World Deployments](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-1--setting-up-hello-world-deployments)
+   - [Step 2 — Installing the Kubernetes Nginx Ingress Controller](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-2--installing-the-kubernetes-nginx-ingress-controller)
    - [Step 3 — Exposing the App Using an Ingress](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-3--exposing-the-app-using-an-ingress)
 4. Part-2
    - [Securing the Ingress Using Cert-Manager](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/blob/pandeswara/Securing-the-Ingress-Using-Cert-Manager.md)
