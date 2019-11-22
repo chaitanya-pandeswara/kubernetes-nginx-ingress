@@ -189,7 +189,7 @@ Both `hello-kubernetes-first` and `hello-kubernetes-second` are listed, which me
 
 You’ve created two deployments of the `hello-kubernetes` app with accompanying Services. Each one has a different message set in the deployment specification, which allow you to differentiate them during testing. In the next step, you’ll install the Nginx Ingress Controller itself.
 
-
+### Step 2 — Installing the Kubernetes Nginx Ingress Controller
 
 Now you’ll install the Kubernetes-maintained [Nginx Ingress Controller](https://github.com/kubernetes/ingress-nginx) using Helm. Note that there are several [Nginx Ingresses](https://github.com/nginxinc/kubernetes-ingress/blob/master/docs/nginx-ingress-controllers.md).
 
@@ -268,7 +268,7 @@ kubectl get services -o wide -w nginx-ingress-controller
 
 You’ve installed the Nginx Ingress maintained by the Kubernetes community. It will route HTTP and HTTPS traffic from the Load Balancer to appropriate back-end Services, configured in Ingress Resources. In the next step, you’ll expose the `hello-kubernetes` app deployments using an Ingress Resource.
 
-
+### Step 3 — Exposing the App Using an Ingress
 
 Now you’re going to create an Ingress Resource and use it to expose the `hello-kubernetes` app deployments at your desired domains. You’ll then test it by accessing it from your browser.
 
@@ -329,7 +329,7 @@ With this, you have verified that the Ingress Controller correctly routes reques
 
 You’ve created and configured an Ingress Resource to serve the `hello-kubernetes` app deployments at your domains. In the next step, you’ll set up Cert-Manager, so you’ll be able to secure your Ingress Resources with free TLS certificates from Let’s Encrypt.
 
-
+### Step 4 — Securing the Ingress Using Cert-Manager
 
 To secure your Ingress Resources, you’ll install Cert-Manager, create a `clusterissuer` for production, and modify the configuration of your Ingress to take advantage of the TLS certificates. Cluster Issuers are Cert-Manager Resources in Kubernetes that provision TLS certificates. Once installed and configured, your app will be running behind HTTPS.
 
