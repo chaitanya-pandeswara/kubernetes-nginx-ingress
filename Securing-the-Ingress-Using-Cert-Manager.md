@@ -38,6 +38,7 @@ Helm will display the following output:
 
 ```
 Output
+
 "jetstack" has been added to your repositories
 ```
 
@@ -51,6 +52,7 @@ You will see the following output:
 
 ```
 Output
+
 NAME:   cert-manager
 LAST DEPLOYED: ...
 NAMESPACE: cert-manager
@@ -160,7 +162,7 @@ nano production_issuer.yaml
 
 Add the following lines:
 
-<u>production_issuer.yaml</u>
+<ins>production_issuer.yaml</ins>
 
 ```
 apiVersion: cert-manager.io/v1alpha2
@@ -196,6 +198,7 @@ You will see the following output:
 
 ```
 Output
+
 clusterissuer.cert-manager.io/letsencrypt-prod created
 ```
 
@@ -207,7 +210,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the highlighted lines:
 
-<u>hello-kubernetes-ingress.yaml</u>
+<ins>hello-kubernetes-ingress.yaml</ins>
 
 ```
 apiVersion: extensions/v1beta1
@@ -252,6 +255,7 @@ You will see the following output:
 
 ```
 Output
+
 ingress.extensions/hello-kubernetes-ingress configured
 ```
 
@@ -265,6 +269,7 @@ The end of the output will look similar to this:
 
 ```
 Output
+
 Events:
   Type    Reason        Age   From          Message
   ----    ------        ----  ----          -------
