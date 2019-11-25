@@ -105,6 +105,7 @@ You’ll see the following output:
 
 ```
 Output
+
 service/hello-kubernetes-first created
 deployment.apps/hello-kubernetes-first created
 ```
@@ -119,6 +120,7 @@ The output will look like this:
 
 ```
 Output
+
 NAME                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 hello-kubernetes-first   ClusterIP   10.245.85.236   <none>        80:31623/TCP   35s
 ```
@@ -186,6 +188,7 @@ The output will be:
 
 ```
 Output
+
 service/hello-kubernetes-second created
 deployment.apps/hello-kubernetes-second created
 ```
@@ -231,6 +234,7 @@ The output will look like:
 
 ```
 Output
+
 NAME:   nginx-ingress
 LAST DEPLOYED: ...
 NAMESPACE: default
@@ -302,7 +306,7 @@ nano hello-kubernetes-ingress.yaml
 
 Add the following lines to your file:
 
-<u>hello-kubernetes-ingress.yaml</u>
+<ins>hello-kubernetes-ingress.yaml</ins>
 
 ```
 apiVersion: extensions/v1beta1
