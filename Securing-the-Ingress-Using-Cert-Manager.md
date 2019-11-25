@@ -12,6 +12,7 @@ You will see the following output:
 
 ```
 Output
+
 customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io created
