@@ -12,9 +12,9 @@
    - [Step 1 — Setting Up Hello World Deployments](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-1--setting-up-hello-world-deployments)
    - [Step 2 — Installing the Kubernetes Nginx Ingress Controller](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-2--installing-the-kubernetes-nginx-ingress-controller)
    - [Step 3 — Exposing the App Using an Ingress](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-3--exposing-the-app-using-an-ingress)
-4. Part-2
+4. [Conclusion](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#conclusion)
+5. Part-2
    - [Securing the Ingress Using Cert-Manager](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/blob/pandeswara/Securing-the-Ingress-Using-Cert-Manager.md)
-5. [Conclusion](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#conclusion)
 
 
 
@@ -360,3 +360,7 @@ You’ve created and configured an Ingress Resource to serve the `hello-kubernet
 You have now successfully set up the Nginx Ingress Controller and Cert-Manager on your DigitalOcean Kubernetes cluster using Helm. You are now able to expose your apps to the Internet, at your domains, secured using Let’s Encrypt TLS certificates.
 
 For further information about the Helm package manager, read this [introduction article](https://www.digitalocean.com/community/tutorials/an-introduction-to-helm-the-package-manager-for-kubernetes).
+
+
+
+### [Securing the Ingress Using Cert-Manager](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/blob/pandeswara/Securing-the-Ingress-Using-Cert-Manager.md#securing-the-ingress-using-cert-manager)
