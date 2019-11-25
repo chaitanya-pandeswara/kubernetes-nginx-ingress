@@ -1,4 +1,4 @@
-### <ins>Securing the Ingress Using Cert-Manager:</ins>
+# <ins>Securing the Ingress Using Cert-Manager:</ins>
 
 To secure your Ingress Resources, you’ll install Cert-Manager, create a `clusterissuer` for production, and modify the configuration of your Ingress to take advantage of the TLS certificates. Cluster Issuers are Cert-Manager Resources in Kubernetes that provision TLS certificates. Once installed and configured, your app will be running behind HTTPS.
 
