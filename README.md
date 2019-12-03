@@ -1,10 +1,28 @@
-<img src="images/kubernetes.png" align="center" />
+<p align="center">
+<img src="images/Ingress_With_LB.png" align="center"/>
+</p>
+
+
+
+<ins>Table of Contents:</ins>
+
+1. [Introduction](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#introduction)
+2. [Prerequisites](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#prerequisites)
+3. Part-1
+   - [Step 1 — Setting Up Hello World Deployments](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-1--setting-up-hello-world-deployments)
+   - [Step 2 — Installing the Kubernetes Nginx Ingress Controller](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-2--installing-the-kubernetes-nginx-ingress-controller)
+   - [Step 3 — Exposing the App Using an Ingress](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#step-3--exposing-the-app-using-an-ingress)
+4. [Conclusion](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/tree/pandeswara#conclusion)
+5. Part-2
+   - [Securing the Ingress Using Cert-Manager](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/blob/pandeswara/Securing-the-Ingress-Using-Cert-Manager.md)
+
+
 
 # How To Set Up an Nginx Ingress on DigitalOcean Kubernetes Using Helm
 
 
 
-### Introduction
+### <ins>Introduction:</ins>
 
 Kubernetes [Ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/) offer you a flexible way of routing traffic from beyond your cluster to internal Kubernetes Services. Ingress *Resources* are objects in Kubernetes that define rules for routing HTTP and HTTPS traffic to Services. For these to work, an Ingress *Controller* must be present; its role is to implement the rules by accepting traffic (most likely via a Load Balancer) and routing it to the appropriate Services. Most Ingress Controllers use only one global Load Balancer for all Ingresses, which is more efficient than creating a Load Balancer per every Service you wish to expose.
 
@@ -14,13 +32,13 @@ In this guide, you’ll set up the Kubernetes-maintained [Nginx Ingress Controll
 
 
 
-### Prerequisites
+### <ins>Prerequisites:</ins>
 
 - A DigitalOcean Kubernetes cluster with your connection configuration configured as the`kubectl` default. Instructions on how to configure `kubectl` are shown under the **Connect to your Cluster** step shown when you create your cluster. To learn how to create a Kubernetes cluster on DigitalOcean, see [Kubernetes Quickstart](https://www.digitalocean.com/docs/kubernetes/quickstart/).
 - The Helm package manager installed on your local machine, and Tiller installed on your cluster. Complete steps 1 and 2 of the [How To Install Software on Kubernetes Clusters with the Helm Package Manager](https://www.digitalocean.com/community/tutorials/how-to-install-software-on-kubernetes-clusters-with-the-helm-package-manager) tutorial.
 - A fully registered domain name with two available A records. This tutorial will use <span style="color:red">`hw1.your_domain`</span> and <span style="color:red">`hw2.your_domain`</span> throughout. You can purchase a domain name on [Namecheap](https://www.namecheap.com/), get one for free on [Freenom](https://www.freenom.com/en/index.html?lang=en), or use the domain registrar of your choice.
 
-### Step 1 — Setting Up Hello World Deployments
+### <ins>Step 1 — Setting Up Hello World Deployments:</ins>
 
 In this section, before you deploy the Nginx Ingress, you will deploy a Hello World app called [`hello-kubernetes`](https://hub.docker.com/r/paulbouwer/hello-kubernetes/) to have some Services to which you’ll route the traffic. To confirm that the Nginx Ingress works properly in the next steps, you’ll deploy it twice, each time with a different welcome message that will be shown when you access it from your browser.
 
@@ -35,6 +53,7 @@ Add the following lines:
 <ins>hello-kubernetes-first.yaml</ins>
 
 ```
+​```
 apiVersion: v1
 kind: Service
 metadata:
@@ -69,6 +88,7 @@ spec:
         env:
         - name: MESSAGE
           value: Hello from the first deployment!
+​```
 ```
 
 This configuration defines a Deployment and a Service. The Deployment consists of three replicas of the `paulbouwer/hello-kubernetes:1.5` image, and an environment variable named `MESSAGE`—you will see its value when you access the app. The Service here is defined to expose the Deployment in-cluster at port `80`.
@@ -194,7 +214,7 @@ Both `hello-kubernetes-first` and `hello-kubernetes-second` are listed, which me
 
 You’ve created two deployments of the `hello-kubernetes` app with accompanying Services. Each one has a different message set in the deployment specification, which allow you to differentiate them during testing. In the next step, you’ll install the Nginx Ingress Controller itself.
 
-### Step 2 — Installing the Kubernetes Nginx Ingress Controller
+### <ins>Step 2 — Installing the Kubernetes Nginx Ingress Controller:</ins>
 
 Now you’ll install the Kubernetes-maintained [Nginx Ingress Controller](https://github.com/kubernetes/ingress-nginx) using Helm. Note that there are several [Nginx Ingresses](https://github.com/nginxinc/kubernetes-ingress/blob/master/docs/nginx-ingress-controllers.md).
 
@@ -274,7 +294,7 @@ kubectl get services -o wide -w nginx-ingress-controller
 
 You’ve installed the Nginx Ingress maintained by the Kubernetes community. It will route HTTP and HTTPS traffic from the Load Balancer to appropriate back-end Services, configured in Ingress Resources. In the next step, you’ll expose the `hello-kubernetes` app deployments using an Ingress Resource.
 
-### Step 3 — Exposing the App Using an Ingress
+### <ins>Step 3 — Exposing the App Using an Ingress:</ins>
 
 Now you’re going to create an Ingress Resource and use it to expose the `hello-kubernetes` app deployments at your desired domains. You’ll then test it by accessing it from your browser.
 
@@ -335,6 +355,7 @@ With this, you have verified that the Ingress Controller correctly routes reques
 
 You’ve created and configured an Ingress Resource to serve the `hello-kubernetes` app deployments at your domains. In the next step, you’ll set up Cert-Manager, so you’ll be able to secure your Ingress Resources with free TLS certificates from Let’s Encrypt.
 
+<<<<<<< HEAD
 ### Step 4 — Securing the Ingress Using Cert-Manager
 
 To secure your Ingress Resources, you’ll install Cert-Manager, create a `clusterissuer` for production, and modify the configuration of your Ingress to take advantage of the TLS certificates. Cluster Issuers are Cert-Manager Resources in Kubernetes that provision TLS certificates. Once installed and configured, your app will be running behind HTTPS.
@@ -618,11 +639,14 @@ Events:
 ```
 
 When your last line of output reads `Certificate issued successfully`, you can exit by pressing `CTRL + C`. Navigate to one of your domains in your browser to test. You’ll see the padlock to the left of the address bar in your browser, signifying that your connection is secure.
-
-In this step, you have installed Cert-Manager using Helm and created a Let’s Encrypt `ClusterIssuer`. After, you updated your Ingress Resource to take advantage of the Issuer for generating TLS certificates. In the end, you have confirmed that HTTPS works correctly by navigating to one of your domains in your browser.
-
-### Conclusion
+=======
+### <ins>Conclusion:</ins>
 
 You have now successfully set up the Nginx Ingress Controller and Cert-Manager on your DigitalOcean Kubernetes cluster using Helm. You are now able to expose your apps to the Internet, at your domains, secured using Let’s Encrypt TLS certificates.
+>>>>>>> master
 
 For further information about the Helm package manager, read this [introduction article](https://www.digitalocean.com/community/tutorials/an-introduction-to-helm-the-package-manager-for-kubernetes).
+
+
+
+### [Securing the Ingress Using Cert-Manager](https://github.com/chaitanya-pandeswara/kubernetes-nginx-ingress/blob/pandeswara/Securing-the-Ingress-Using-Cert-Manager.md#securing-the-ingress-using-cert-manager)
