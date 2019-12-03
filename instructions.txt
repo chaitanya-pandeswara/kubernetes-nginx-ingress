@@ -1,0 +1,6 @@
+Follow the below instructions:
+
+1. Create cluster
+2. Configure the cluster
+3. Deploy
+4. Start
